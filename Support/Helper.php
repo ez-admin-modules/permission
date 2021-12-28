@@ -1,6 +1,6 @@
 <?php
 
-namespace EzAdmin\Permission\Support;
+namespace EzAdmin\Modules\Permission\Support;
 
 class Helper
 {

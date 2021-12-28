@@ -3,7 +3,7 @@
 namespace EzAdmin\Modules\Permission\Models;
 
 use EzAdmin\Base\Model;
-use EzAdmin\Permission\Support\Helper;
+use EzAdmin\Modules\Permission\Support\Helper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;

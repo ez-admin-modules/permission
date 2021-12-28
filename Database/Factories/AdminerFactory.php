@@ -1,7 +1,7 @@
 <?php
 namespace EzAdmin\Modules\Permission\Database\Factories;
 
-use EzAdmin\Permission\Support\Helper;
+use EzAdmin\Modules\Permission\Support\Helper;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AdminerFactory extends Factory
