@@ -3,6 +3,7 @@
 namespace EzAdmin\Modules\Permission\Models;
 
 use EzAdmin\Base\Model;
+use EzAdmin\Permission\Support\Helper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
@@ -29,7 +30,7 @@ class Adminer extends Model
      */
     public function setAvatarAttribute($avatar)
     {
-        $this->attributes['avatar'] = $avatar ?? ez_avatar_url();
+        $this->attributes['avatar'] = $avatar ?? Helper::DefaultAvatar();
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 namespace EzAdmin\Modules\Permission\Database\Factories;
 
+use EzAdmin\Permission\Support\Helper;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AdminerFactory extends Factory
@@ -23,7 +24,7 @@ class AdminerFactory extends Factory
             'username' => 'admin',
             'nickname' => 'Admin',
             'password' => bcrypt('admin123'),
-            'avatar'   => ez_avatar_url(),
+            'avatar'   => Helper::DefaultAvatar(),
             'status'   => 1,
         ];
     }
