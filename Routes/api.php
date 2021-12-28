@@ -11,13 +11,16 @@
 |
  */
 
-Route::prefix('admin')
-    ->middleware('permission:permission')
-    ->name('admin.')
-    ->namespace('Admin')
+Route::prefix('api')
+    ->namespace('Api')
     ->group(function () {
-        Route::prefix('v1')
-            ->name('v1.')
-            ->namespace('V1')
-            ->group(module_path('Permission', '/Routes/api/admin/v1.php'));
+        // 后台Api
+        Route::prefix('admin')
+            ->namespace('Admin')
+            ->middleware('permission:permission')
+            ->group(function () {
+                Route::prefix('v1')
+                    ->namespace('V1')
+                    ->group(module_path('Permission', '/Routes/api/admin/v1.php'));
+            });
     });

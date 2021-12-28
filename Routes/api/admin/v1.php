@@ -5,14 +5,14 @@ use EzAdmin\Modules\Permission\Http\Controllers\Api\Admin\V1\AuthController;
 use EzAdmin\Modules\Permission\Http\Controllers\Api\Admin\V1\MenuController;
 use EzAdmin\Modules\Permission\Http\Controllers\Api\Admin\V1\RoleController;
 
-Route::prefix('auth')->name('auth.')->group(function () {
+Route::prefix('auth')->group(function () {
     Route::post('login', [AuthController::class, 'login']);
     Route::post('logout', [AuthController::class, 'logout']);
     Route::get('/', [AuthController::class, 'show']);
     Route::put('/', [AuthController::class, 'update']);
 });
 
-Route::prefix('permission')->name('permission.')->group(function () {
+Route::prefix('permission')->group(function () {
     // 用户管理
     Route::get('adminers', [AdminerController::class, 'index']);
     Route::post('adminers', [AdminerController::class, 'store']);
