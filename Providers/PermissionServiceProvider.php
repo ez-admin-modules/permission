@@ -28,7 +28,6 @@ class PermissionServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
         $this->registerMiddleware();
-        $this->registerPublishing();
     }
 
     /**
@@ -54,18 +53,6 @@ class PermissionServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
         );
-    }
-
-    /**
-     * 资源发布
-     *
-     * @return void
-     */
-    protected function registerPublishing()
-    {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([__DIR__ . '/../Resources/dist' => public_path('modules/' . $this->moduleNameLower)], $this->moduleNameLower . '-module-dist');
-        }
     }
 
     /**
