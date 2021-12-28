@@ -1,0 +1,25 @@
+{
+    "name": "ez-admin-modules/permission",
+    "description": "权限管理",
+    "authors": [
+        {
+            "name": "Sirius",
+            "email": "707759383@qq.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EzAdmin\\Permission\\Providers\\PermissionServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "EzAdmin\\EzAdmin\\Permission\\": ""
+        }
+    }
+}

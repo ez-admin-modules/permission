@@ -1,0 +1,14 @@
+{
+    "name": "Permission",
+    "alias": "permission",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "EzAdmin\\Modules\\Permission\\Providers\\PermissionServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
+
