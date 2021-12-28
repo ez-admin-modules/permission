@@ -23,7 +23,7 @@ class AdminerFactory extends Factory
         return [
             'username' => 'admin',
             'nickname' => 'Admin',
-            'password' => bcrypt('admin123'),
+            'password' => 'admin123',
             'avatar'   => Helper::DefaultAvatar(),
             'status'   => 1,
         ];

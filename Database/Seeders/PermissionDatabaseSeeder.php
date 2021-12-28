@@ -18,6 +18,7 @@ class PermissionDatabaseSeeder extends Seeder
 
         $this->call([
             AdminerTableSeeder::class,
+            MenuTableSeeder::class,
         ]);
     }
 }

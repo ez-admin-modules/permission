@@ -17,6 +17,8 @@ class AdminerTableSeeder extends Seeder
     {
         Model::unguard();
 
-        Adminer::factory()->create();
+        Adminer::factory()
+            ->hasRoles(1)
+            ->create();
     }
 }

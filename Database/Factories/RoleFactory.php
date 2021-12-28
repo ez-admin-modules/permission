@@ -20,7 +20,10 @@ class RoleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => '超级管理员',
+            'mark' => config('permission.super_role_mark'),
+            'description' => '',
+            'status' => 1,
         ];
     }
 }

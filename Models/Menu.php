@@ -14,8 +14,10 @@ class Menu extends Model
      */
     protected $guarded = ['id'];
 
-    protected static function newFactory()
+    protected static function booted()
     {
-        return \EzAdmin\Modules\Permission\Database\factories\MenuFactory::new ();
+        static::created(function ($row) {
+            $row->save(['sort' => $row->id]);
+        });
     }
 }
